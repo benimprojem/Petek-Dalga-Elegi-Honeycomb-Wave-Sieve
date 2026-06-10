@@ -8,7 +8,24 @@ Bu döküman, altıgen katman genişleme mekanizmasında $6n \pm 1$ serisi kulla
 
 Altıgen spiralin ardışık katmanlarında, alt kenarın (Side 5) başlangıç noktalarındaki sayılar katman numarasına ($L$) bağlı olarak ikinci dereceden bir polinom oluşturur. $L = 1, 2, 3$ katmanlarındaki gerçek geometrik başlangıç verileri kullanılarak matris yöntemiyle denklem sistemi çözülmüştür:
 
-$$\begin{bmatrix} 1^2 & 1 & 1 \\ 2^2 & 2 & 1 \\ 3^2 & 3 & 1 \end{bmatrix} \begin{bmatrix} A \\ B \\ C \end{bmatrix} = \begin{bmatrix} 19 \\ 53 \\ 103 \end{bmatrix}$$
+$$
+\begin{bmatrix}
+1^2 & 1 & 1 \\
+2^2 & 2 & 1 \\
+3^2 & 3 & 1
+\end{bmatrix}
+\begin{bmatrix}
+A \\
+B \\
+C
+\end{bmatrix}
+=
+\begin{bmatrix}
+19 \\
+53 \\
+103
+\end{bmatrix}
+$$
 
 Bu lineer denklem sisteminin çözümünden $A=8, B=10, C=1$ katsayıları elde edilmiştir. Böylece alt kenar ana fonksiyonu $g(L)$ şu şekilde formülize edilmiştir:
 
@@ -52,11 +69,11 @@ Keşfedilen ve doğruluğu test edilen kritik ritim dalga boyları ve atlama şa
 
 Klasik bölme testlerine ihtiyaç duymadan, sadece modüler kısıtlamaları kullanarak saf asalları ayıran küme fonksiyonu şu şekilde formülize edilmiştir:
 
-$$\mathcal{P}_{\text{zararli}} = \left\{ p \in \mathbb{P} \ \middle|\  \left(\frac{68}{p}\right) = 1 \right\} \cup \{5\}$$
+$$\mathcal{P}_{\text{zararli}} = \{ p \in \mathbb{P} \mid \left(\frac{68}{p}\right) = 1 \} \cup \{5\}$$
 
 Belirlenen bir $M$ katman derinliğine kadar olan tüm pürüzsüz asal kümesi ($\mathcal{A}$), şu fonksiyonel süzgeçten geçerek %100 saflıkla elde edilir:
 
-$$\mathcal{A}(M) = \left\{ g(L) \ \middle|\  1 \le L \le M \ \land \ \forall p \in \mathcal{P}_{\text{zararli}}^{\le \sqrt{g(M)}}, \ g(L) \not\equiv 0 \pmod p \right\}$$
+$$\mathcal{A}(M) = \{ g(L) \mid 1 \le L \le M \ \land \ \forall p \in \mathcal{P}_{\text{zararli}}^{\le \sqrt{g(M)}}, \ g(L) \not\equiv 0 \pmod p \}$$
 
 Bu formülizasyon, geometrik döngülerin modüler saat mekanizmalarıyla tamamen kontrol altına alınabildiğini ve $1000$ katman derinliğine kadar hatasız çalıştığını doğrulamıştır.
 
@@ -70,44 +87,3 @@ Gerçek Asal Sayısı: 1391
 Nihai Asallık Kalitesi: %100.00
 Bu katman derinliğinde akıllı kalkan %100 saf asal koridoru üretti.
 =================================================================
-
-```
-
----
-
-## 5. Sol Alt Kenar Analizleri
-
-### 5.1. Sol Alt Kenar İçin Diskriminant Analizi
-
-Formülümüz:
-
-$$f(L) = 9L^2 + 3L + 5$$
-
-Bu polinomun bizi vurabilecek, yani bu hatta bileşik sayı üretebilecek zararlı asallarını bulmak için hemen diskriminant ($D = b^2 - 4ac$) hesabını yapıyoruz:
-
-$$D = 3^2 - 4 \cdot 9 \cdot 5 = 9 - 180 = -171$$
-
-İşte Sol Alt Kenar hattını yöneten sihirli sayı: **$-171$**.
-
-Matematiksel olarak bu hatta bir asalın ($p$) bizi vurabilmesi için, $-171$ sayısının o asalın modunda bir tam kare (karesel kalan) olması gerekir:
-
-$$\left(\frac{-171}{p}\right) = 1$$
-
-### 5.2. "Banned" (Doğal Engelli) Asalların Deseni
-
-$-171$ sayısı asal çarpanlarına ayrıldığında $-1 \cdot 3^2 \cdot 19$ elde edilir. Bu durum, bu hattın arkasında muazzam bir matematiksel kalkan oluşturur:
-
-* **3 Asalı:** Polinomun katsayıları ($9$ ve $3$) zaten 3'ün katı olduğundan, $L$ ne olursa olsun bu hat 3'e bölündüğünde her zaman sabit terim olan $5$ kalanını verir. Yani **3 asalı bu hattı asla kesemez**.
-* **5 Asalı:** İlk testlerimizde görmüştük; $L=3$ için $95$ ($5 \times 19$) çıkmıştı. Demek ki 5 bu listede **aktif bir düşman**.
-* **Diğer Asallar:** $-171$'in karesel kalan olmadığı asallar (örneğin **7, 11, 13**) bu hattı **ömür boyu asla kesemez!** Hatırlarsan, alt kenarda 13 bizi periyodik olarak vuruyordu ama Sol Alt Kenarda 13 tamamen engelli (banned) durumdadır.
-
-```text
-=== SOL ALT KENAR OTOMATİK TAHMİNLİ KALKAN (İlk 5000 Katman) ===
-Aktif Filtre Edilen Zararlı Asal Sayısı: 866
-Kalan Aday Sayısı: 579
-Gerçek Asal Sayısı: 579
-Nihai Asallık Kalitesi: %100.00
-Sol alt hat üzerinde de %100 saf asal koridoru başarıyla üretildi.
-=================================================================
-
-```
