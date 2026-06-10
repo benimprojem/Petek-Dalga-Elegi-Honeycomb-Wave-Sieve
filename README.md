@@ -9,22 +9,22 @@ Bu döküman, altıgen katman genişleme mekanizmasında $6n \pm 1$ serisi kulla
 Altıgen spiralin ardışık katmanlarında, alt kenarın (Side 5) başlangıç noktalarındaki sayılar katman numarasına ($L$) bağlı olarak ikinci dereceden bir polinom oluşturur. $L = 1, 2, 3$ katmanlarındaki gerçek geometrik başlangıç verileri kullanılarak matris yöntemiyle denklem sistemi çözülmüştür:
 
 $$
-\begin{bmatrix}
+\\begin{bmatrix}
 1^2 & 1 & 1 \\
 2^2 & 2 & 1 \\
 3^2 & 3 & 1
-\end{bmatrix}
-\begin{bmatrix}
+\\end{bmatrix}
+\\begin{bmatrix}
 A \\
 B \\
 C
-\end{bmatrix}
+\\end{bmatrix}
 =
-\begin{bmatrix}
+\\begin{bmatrix}
 19 \\
 53 \\
 103
-\end{bmatrix}
+\\end{bmatrix}
 $$
 
 Bu lineer denklem sisteminin çözümünden $A=8, B=10, C=1$ katsayıları elde edilmiştir. Böylece alt kenar ana fonksiyonu $g(L)$ şu şekilde formülize edilmiştir:
