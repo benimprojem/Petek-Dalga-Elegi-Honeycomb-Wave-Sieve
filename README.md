@@ -59,7 +59,7 @@ $$\mathcal{A}(M) = \left\{ g(L) \ \middle|\  1 \le L \le M \ \land \ \forall p \
 Bu formülizasyon, geometrik döngülerin modüler saat mekanizmalarıyla tamamen kontrol altına alınabildiğini ve $1000$ katman derinliğine kadar hatasız çalıştığını doğrulamıştır.
 
 
-
+```
 ## 5000 Katman Testi:
 
 === ALT KENAR OTOMATİK TAHMİNLİ KALKAN (İlk 5000 Katman) ===
@@ -69,7 +69,7 @@ Gerçek Asal Sayısı: 1391
 Nihai Asallık Kalitesi: %100.00
 Bu katman derinliğinde akıllı kalkan %100 saf asal koridoru üretti.
 =================================================================
-
+```
 ### 1. Sol Alt Kenar İçin Diskriminant Analizi
 
 Formülümüz:
@@ -100,7 +100,7 @@ $-171$ sayısı asal çarpanlarına ayrıldığında $-1 \cdot 3^2 \cdot 19$ eld
 * **Diğer Asallar:** $-171$'in karesel kalan olmadığı asallar (örneğin **7, 11, 13**) bu hattı **ömür boyu asla kesemez!** Hatırlarsan, alt kenarda 13 bizi periyodik olarak vuruyordu ama Sol Alt Kenarda 13 tamamen engelli (banned) durumdadır.
 
 ---
-
+```
 === SOL ALT KENAR OTOMATİK TAHMİNLİ KALKAN (İlk 5000 Katman) ===
 Aktif Filtre Edilen Zararlı Asal Sayısı: 866
 Kalan Aday Sayısı: 579
@@ -108,4 +108,4 @@ Gerçek Asal Sayısı: 579
 Nihai Asallık Kalitesi: %100.00
 Sol alt hat üzerinde de %100 saf asal koridoru başarıyla üretildi.
 =================================================================
-
+```
